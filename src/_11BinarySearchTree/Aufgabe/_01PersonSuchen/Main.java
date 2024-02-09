@@ -67,11 +67,11 @@ public class Main implements Vorlage {
         List<String> namesList = new List<>();
 
         //Namen einfügen
-        namesList.append("Felix");
-        namesList.append("Hans");
-        namesList.append("Wolfgang");
-        namesList.append("Otto");
-        namesList.append("Barbara");
+        namesList.append("Detlev Kümmel");
+        namesList.append("Sven Deutschmanek");
+        namesList.append("Albert Maier");
+        namesList.append("Dr. Heide Rezepa-Zabel");
+        namesList.append("Horst Lichter");
 
         //Namen aus der Liste in den Baum schreiben
         namesList.toFirst();
