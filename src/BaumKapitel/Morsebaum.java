@@ -43,9 +43,28 @@ public class Morsebaum {
         // Wurzel
         root = new BinaryTree<>("/", e, t);
     }
-
-    public BinaryTree<String> getRoot() {
+    public BinaryTree<String> getRoot(){
         return root;
     }
-    
+
+    private int countLayers(BinaryTree<String> pBaum) {
+        if (pBaum == null) {
+            return -1;
+        } else {
+            int depthLeft = countLayers(pBaum.getLeftTree());
+            int depthRight = countLayers(pBaum.getRightTree());
+            return (depthLeft > depthRight ? depthLeft : depthRight) + 1;
+            //return Math.max(depthLeft, depthRight)) +1;
+        }
+    }
+
+    public static void main(String[] args) {
+        Morsebaum morsebaum = new Morsebaum();
+        BinaryTree<String> root = morsebaum.getRoot();
+
+        int layers = morsebaum.countLayers(root);
+        System.out.println("Ebenen: " + layers);
+    }
+
+
 }
