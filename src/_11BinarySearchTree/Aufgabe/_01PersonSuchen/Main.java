@@ -10,7 +10,7 @@ public class Main implements Vorlage {
     public String personEingeben() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Geben Sie den Namen der Person ein:");
+        System.out.println("Geben Sie den Namen der Person ein: ");
 
         String name = scanner.nextLine();
 
